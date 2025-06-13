@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переадресация</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .loader-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="spinner-border text-primary mb-3" role="status">
+            <span class="visually-hidden">Загрузка...</span>
+        </div>
+    </div>
+    <input type="hidden" id="targetUrl" value="{{ bot.url }}">
+    <input type="hidden" id="botToken" value="{{ bot_token }}">
+    <p class="lead">Вы будете перенаправлены на: <br>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="redirectUrl" value="{{ target_url }}" readonly>
+                        <button type="button" class="btn btn-outline-secondary" onclick="copyToClipboard('redirectUrl')">
+                            <img src="/static/images/copy-icon.png" width="20" height="20" alt="Copy">
+                        </button>
+                    </div>
+                </p>
+    <script>
+        function copyToClipboard(elementId) {
+            var copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            document.execCommand("copy");
+            alert("URL скопирован!");
+        }
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

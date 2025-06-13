@@ -1,0 +1,84 @@
+{
+    "7733003240:AAHmx1vmGAermT7KJ3ol6s8c4BgCuoNWcRM": {
+        "telegram_id": "6222585321",
+        "url": "https://www.airbnb.com",
+        "info": {
+            "id": 7733003240,
+            "is_bot": true,
+            "first_name": "IPdor",
+            "username": "ttvast_bot",
+            "can_join_groups": true,
+            "can_read_all_group_messages": false,
+            "supports_inline_queries": false,
+            "can_connect_to_business": false,
+            "has_main_web_app": false
+        },
+        "created_at": "2025-02-16T00:41:28.620766",
+        "consent_url": "http://97de9184-1b89-493d-9e2a-f950b10644d7-00-1bxut6z0y6kv7.sisko.replit.dev/consent/7733003240:AAHmx1vmGAermT7KJ3ol6s8c4BgCuoNWcRM",
+        "approved_ips": [
+            "93.157.175.86",
+            "178.176.78.213"
+        ]
+    },
+    "8020015322:AAEYiucSUVNnf73ylf6SI72lTqBpYsm0PFs": {
+        "telegram_id": "2052776225",
+        "url": "https://ggsell.net",
+        "info": {
+            "id": 8020015322,
+            "is_bot": true,
+            "first_name": "GGsell.donat",
+            "username": "GGsellsteambot",
+            "can_join_groups": true,
+            "can_read_all_group_messages": false,
+            "supports_inline_queries": false,
+            "can_connect_to_business": false,
+            "has_main_web_app": false
+        },
+        "created_at": "2025-02-15T23:57:47.389751",
+        "consent_url": "http://97de9184-1b89-493d-9e2a-f950b10644d7-00-1bxut6z0y6kv7.sisko.replit.dev/consent/8020015322:AAEYiucSUVNnf73ylf6SI72lTqBpYsm0PFs",
+        "approved_ips": [
+            "213.87.153.86",
+            "93.157.175.86"
+        ]
+    },
+    "8194589506:AAEHxvVaaZ7XKtZw4axnn7Cra8QLJi4RxFI": {
+        "telegram_id": "8163030416",
+        "url": "https://top.bigboss.ing/video/80281/",
+        "info": {
+            "id": 8194589506,
+            "is_bot": true,
+            "first_name": "Nigga bro_bot",
+            "username": "gayeiejshuBot",
+            "can_join_groups": true,
+            "can_read_all_group_messages": false,
+            "supports_inline_queries": false,
+            "can_connect_to_business": false,
+            "has_main_web_app": false
+        },
+        "created_at": "2025-02-16T00:44:45.120341",
+        "consent_url": "http://97de9184-1b89-493d-9e2a-f950b10644d7-00-1bxut6z0y6kv7.sisko.replit.dev/consent/8194589506:AAEHxvVaaZ7XKtZw4axnn7Cra8QLJi4RxFI",
+        "approved_ips": [
+            "93.157.175.86"
+        ]
+    },
+    "8176193215:AAHa4ZwVSY160y-jWk_IIP-stkd0X76sM0I": {
+        "telegram_id": "6222585321",
+        "url": "https://www.soundcloud.com",
+        "info": {
+            "id": 8176193215,
+            "is_bot": true,
+            "first_name": "IPF",
+            "username": "FuckingIPIshkinsBot",
+            "can_join_groups": true,
+            "can_read_all_group_messages": false,
+            "supports_inline_queries": false,
+            "can_connect_to_business": false,
+            "has_main_web_app": false
+        },
+        "created_at": "2025-02-16T00:38:13.148535",
+        "consent_url": "http://97de9184-1b89-493d-9e2a-f950b10644d7-00-1bxut6z0y6kv7.sisko.replit.dev/consent/8176193215:AAHa4ZwVSY160y-jWk_IIP-stkd0X76sM0I",
+        "approved_ips": [
+            "93.157.175.86"
+        ]
+    }
+}

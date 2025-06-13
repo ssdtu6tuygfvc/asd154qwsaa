@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2 class="mb-0">Информация о боте</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Детали бота</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Имя пользователя: @{{ bot.info.username }}</li>
+                    <li class="list-group-item">Имя: {{ bot.info.first_name }}</li>
+                    <li class="list-group-item">ID бота: {{ bot.info.id }}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Настройки</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Telegram ID: {{ bot.telegram_id }}</li>
+                    <li class="list-group-item">
+                        URL сайта: <a href="{{ bot.url }}" target="_blank">{{ bot.url }}</a>
+                    </li>
+                    <li class="list-group-item">Создан: {{ bot.created_at }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Страница перенаправления</h3>
+                <div class="alert alert-info">
+                    <p>Поделитесь этой ссылкой с пользователями для сбора их IP адресов:</p>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="consentUrl" value="{{ bot.consent_url }}" readonly>
+                        <button type="button" class="btn btn-outline-secondary" onclick="copyToClipboard('consentUrl')" data-bs-toggle="tooltip" data-bs-title="Копировать">
+                            <img src="/static/images/copy-icon.png" width="20" height="20" alt="Copy">
+                        </button>
+                    </div>
+                    <small class="text-muted">IP адрес будет собран при переходе.</small>
+                </div>
+
+                <h4>Собранные IP</h4>
+                {% if bot.approved_ips %}
+                <ul class="list-group">
+                    {% for ip in bot.approved_ips %}
+                    <li class="list-group-item">{{ ip }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="text-muted">Пока нет собранных IP.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Назад</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Блок добавления бота -->
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="mb-0">
+                    <i class="fab fa-telegram text-primary"></i> 
+                    Добавить Telegram бота
+                </h2>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('submit') }}" method="POST">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label for="bot_token" class="form-label">Токен бота</label>
+                            <a href="{{ url_for('guide') }}#collapseOne" class="btn btn-link">
+                                <i class="fas fa-question-circle"></i> Как получить?
+                            </a>
+                        </div>
+                        <input type="text" class="form-control" id="bot_token" name="bot_token" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label for="telegram_id" class="form-label">Ваш Telegram ID</label>
+                            <a href="{{ url_for('guide') }}#collapseTwo" class="btn btn-link">
+                                <i class="fas fa-question-circle"></i> Где найти?
+                            </a>
+                        </div>
+                        <input type="text" class="form-control" id="telegram_id" name="telegram_id" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label for="url" class="form-label">URL сайта</label>
+                            <a href="{{ url_for('guide') }}#collapseThree" class="btn btn-link">
+                                <i class="fas fa-info-circle"></i> Подробнее
+                            </a>
+                        </div>
+                        <div class="input-group">
+                            <input type="url" class="form-control" id="url" name="url" required>
+                            <button type="button" class="btn btn-outline-secondary" onclick="generateRandomUrl()">
+                                <img src="/static/images/random-icon.png" width="20" height="20" alt="Random">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus-circle"></i> Добавить
+                        </button>
+                        <a href="{{ url_for('reset') }}" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Сбросить
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Информационные блоки -->
+    <div class="col-md-8 offset-md-2">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-history fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">История</h5>
+                        <p class="card-text">Просмотр всех добавленных ботов и собранных IP-адресов</p>
+                        <a href="{{ url_for('history') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-right"></i> Перейти
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">IP Мониторинг</h5>
+                        <p class="card-text">Отслеживание IP-адресов в реальном времени</p>
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-right"></i> Перейти
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-book fa-2x text-primary mb-3"></i>
+                        <h5 class="card-title">Инструкция</h5>
+                        <p class="card-text">Подробное руководство по настройке бота</p>
+                        <a href="{{ url_for('guide') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-right"></i> Перейти
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

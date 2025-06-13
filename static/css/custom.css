@@ -1,0 +1,52 @@
+/* Custom styles to complement Bootstrap */
+.card {
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    background-color: var(--bs-dark);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar {
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-border-color);
+}
+
+.accordion-button {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.accordion-body {
+    background-color: var(--bs-dark);
+}
+
+/* Make sure charts are visible in dark mode */
+#visitsChart {
+    background-color: var(--bs-dark);
+    border-radius: 0.375rem;
+    padding: 1rem;
+}
+
+
+/* Make icons white except for copy buttons in alerts */
+.btn img, .btn-outline-secondary img {
+    filter: brightness(0) invert(1);
+}
+
+.alert .btn img {
+    filter: brightness(0);
+}
